@@ -6,9 +6,11 @@ const Body = Matter.Body;
 var box, box2;
 var engine, world, paper;
 var ground;
+var paperIMG, dustbinIMG;
 function preload()
 {
-	
+	paperIMG=loadImage("paper.png")
+	dustbinIMG=loadImage("dustbingreen.png")
 }
 
 function setup() {
@@ -45,6 +47,10 @@ function draw() {
   rectMode(CENTER);
   background(0);
   paper.display();
+  //groundObject.display();
+  //dustbinObject.display();
+  //paperObject.display();
+
   rect(box.position.x,box.position.y,20,100)
   rect(box2.position.x,box2.position.y,20,100)
   rect(ground.position.x,ground.position.y,800,20)
